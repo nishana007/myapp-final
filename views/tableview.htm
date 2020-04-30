@@ -1,0 +1,58 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#!/">WELCOME TO SCIENTIA!</a>
+    </div>
+   
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#!/">HOME</a></li>
+        <li><a href="#!addform">ADD</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid three" >  
+
+    <table  class="table table-striped">
+        <thead>
+          <tr>
+            <th>INDEX</th>
+            <th>BUG ID</th>
+            <th>ASSIGNEE</th>
+            <th>REPORTER</th>
+            <th>SUMMARY</th>
+            <th>ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="x in names ">
+              <td>{{$index+1}}</td>
+              <td>{{ x.bugid }}</td>
+              <td>{{ x.assignee }}</td>
+              <td>{{ x.reporter }}</td>
+              <td>{{ x.summary }}</td> 
+              <td><div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-info"  ng-click="viewRecord(x.bugid)"><i class="glyphicon glyphicon-eye-open">
+                    </i></button>
+                <button type="button" class="btn btn-default" ng-click="editRecord(x.bugid)"><i class="glyphicon glyphicon-pencil">
+                    </i></button>
+                <button type="button" class="btn btn-danger" ng-click="deletRecord(x.bugid)"><i class="glyphicon glyphicon-trash">
+                    </i></button>
+            </div></td>
+          </tr>
+         
+        </tbody>
+      </table>
+
+</div>
+
+
+
+
+
+
+          
+   
+ 
+  

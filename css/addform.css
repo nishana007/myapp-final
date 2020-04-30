@@ -1,0 +1,23 @@
+
+.the-legend {
+	border-style: none;
+	 border-width: 0;
+	 font-size: 14px;
+	line-height: 20px;
+	margin-bottom: 0;
+	width: 80px;
+	padding: 0 10px;
+	border: 1px solid black;
+	}	
+	
+	.the-fieldset {
+		border: 3px solid #55ACEE;
+		padding: 10px;
+		height:960px;
+	}
+	
+	
+	.red-text
+	{
+		color:red;
+	}

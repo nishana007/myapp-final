@@ -1,0 +1,193 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container-fluid">
+	  <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		<a class="navbar-brand" href="#!/">WELCOME TO SCIENTIA!</a>
+	  </div>
+	  <div class="collapse navbar-collapse" id="myNavbar">
+		<ul class="nav navbar-nav navbar-right">
+		  <li><a href="#!/">HOME</a></li>
+		  <li><a href="#!/" data-toggle="modal" data-target="#myModal2">VIEW</a></li>
+		  <li><a href="#!/" data-toggle="modal" data-target="#myModal">MODIFY</a></li>
+		  <li><a href="#!/" data-toggle="modal" data-target="#myModal1">DELETE</a></li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+
+
+<div class="container">
+<h1 style="text-align:center;margin-top:80px;font-family:Georgia;text-shadow: 2px 2px 5px #55ACEE;"> ADD NEW FIELD</h1>
+ 
+     <fieldset class="the-fieldset">
+        <legend class="the-legend">SCIENTIA</legend>
+	       <form class="form-horizontal" name="myForm" ng-submit="onsubmit()">
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Bug Id:</label>
+				  <div class="col-sm-8">
+					<input type="number" class="form-control" id="bug"  name="bug" ng-model="data.bug" placeholder="Enter numbers only" required >
+	              
+				  </div>
+				</div>
+
+				<div class="form-group">
+				  <label class="control-label col-sm-2">Assignee:</label>
+				  <div class="col-sm-8">          
+					<input type="email" class="form-control" id="assign"  name="assign" ng-model="data.assign" placeholder="Enter a valid emailid"  required>
+					
+				  </div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Reporter:</label>
+					<div class="col-sm-8">          
+					  <input type="email" class="form-control" id="report"  name="report" ng-model="data.report" placeholder="Enter a valid emailid" required>
+				</div>
+				  </div>
+
+				  <div class="form-group">
+					<label  class="control-label col-sm-2" >Summary:</label>
+					<div class="col-sm-8">   
+					 <textarea class="form-control" rows="5" name="summary" id="summary" ng-model="data.summary" required></textarea>
+					</div>
+				  </div> 
+
+				  <div class="form-group">
+					<label class="control-label col-sm-2">Product/App:</label>
+					<div class="col-sm-8">          
+					  <input type="text" class="form-control" id="product"  name="product" ng-model="data.product" required>
+					</div>
+				  </div>
+
+				  <div class="form-group">
+					<label class="control-label col-sm-2">Component:</label>
+					<div class="col-sm-8">          
+					  <input type="text" class="form-control" id="component"  name="component" ng-model="data.comp" required>
+					</div>
+				  </div>
+
+
+
+                  <div class="form-group">
+				  <label class="control-label col-sm-2">OS:</label>
+				  <div class="col-sm-8">
+				  <label class="radio-inline"><input type="radio" name="os" id="mac" value="Mac" ng-model="data.os">Mac</label>
+				  <label class="radio-inline"><input type="radio" name="os" id="windows" value="Windows" ng-model="data.os">Windows</label>
+				  <label class="radio-inline"><input type="radio" name="os" id="linux" value="Linux" ng-model="data.os">Linux</label>
+				  <label class="radio-inline"><input type="radio" name="os" id="all" value="All" ng-model="data.os">All</label>
+				 </div>
+				</div>
+
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Hardware:</label>
+					<div class="col-sm-8">
+					<label class="radio-inline"><input type="radio" name="hard" id="desktop" value="DESKTOP" ng-model="data.hard">Desktop</label>
+					<label class="radio-inline"><input type="radio" name="hard" id="laptop" value="LAPTOP" ng-model="data.hard">Laptop</label>
+					<label class="radio-inline"><input type="radio" name="hard" id="mobile" value="MOBILE" ng-model="data.hard">Mobile</label>
+				</div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Version:</label>
+					<div class="col-sm-8">          
+					  <input type="text" class="form-control" id="version"  name="version" ng-model="data.version" required>
+					</div>
+				  </div>
+
+
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Priority:</label>
+					<div class="col-sm-8">
+					<select class="form-control" name="prior" id="priority" ng-model="data.prior">
+					  <option value="">Please select an option</option>
+	                  <option value="P1">P1</option>
+					  <option value="P2">P2</option>
+					  <option value="P3">P3</option>
+					 </select>
+				  </div> 
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Severity:</label>
+					<div class="col-sm-8">
+					<select class="form-control" name="ser" id="priority" ng-model="data.severity">
+					  <option value="">Please select an option</option>
+			          <option value="P1">Normal</option>
+					  <option value="P2">Major</option>
+					  <option value="P3">Critical</option>
+					 </select>
+				  </div> 
+				</div>
+
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Keywords:</label>
+					<div class="col-sm-8">          
+					  <input type="text" class="form-control" id="key"  name="key" ng-model="data.key">
+					</div>
+				  </div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Changed:</label>
+					<div class="col-sm-8">          
+						<input type="datetime-local" id="appt" name="appt" class="form-control" ng-model="data.changed" required>
+				  </div>
+				</div>
+
+				<div class="form-group">
+					<label class="control-label col-sm-2">Opened:</label>
+					<div class="col-sm-8">          
+						<input type="datetime-local" id="appt1" name="appt1" class="form-control" ng-model="data.opened" required>
+					 </div>
+				</div>
+
+				
+				
+				
+				 <div class="form-group">
+					<label  class="control-label col-sm-2" >Description:</label>
+					<div class="col-sm-8">   
+					 <textarea class="form-control" name="desc" rows="5" id="desc" ng-model="data.desc" required></textarea>
+					</div>
+				  </div> 
+
+				<div class="form-group">        
+				  <div class="col-sm-offset-2 col-sm-8">
+					<button type="submit" class="btn btn-info" ng-click="submit()">Submit</button>
+					<button type="reset" class="btn btn-info">Reset</button>
+				  </div>
+				</div>
+			  </form>
+			</div>
+	  </fieldset>
+	</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
